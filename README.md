@@ -9,7 +9,7 @@ yarn add @susisu/use-controlled-state
 ```
 
 ## Motivation
-Suppose we have the following React component.
+Suppose we have the following React component ([CodeSandbox](https://codesandbox.io/s/stupefied-chaum-p2n95?file=/src/App.tsx)).
 
 ``` tsx
 const NumberInput: React.VFC<{
@@ -43,7 +43,7 @@ There are roughly two ways for solving this problem:
 
 Usually the latter is preferable, because it is completely local to the child input, and the parent does not need to know how the child behaves.
 
-`@susisu/use-controlled-state` provides a utility for managing such local states. With this utility, the above component can be fixed like this:
+`@susisu/use-controlled-state` provides a utility for managing such local states. With this utility, the above component can be fixed like this ([CodeSandbox](https://codesandbox.io/s/elated-dan-lw913?file=/src/App.tsx)):
 
 ``` tsx
 import { createUseControlledState } from "@susisu/use-controlled-state";
