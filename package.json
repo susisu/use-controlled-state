@@ -1,0 +1,33 @@
+{
+  "name": "@susisu/use-controlled-state",
+  "version": "0.0.0",
+  "description": "",
+  "repository": "https://github.com/susisu/use-controlled-state.git",
+  "author": "Susisu <susisu2413@yahoo.co.jp>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "lint": "run-s lint:eslint lint:prettier",
+    "lint-fix": "run-s lint-fix:eslint lint-fix:prettier",
+    "lint:eslint": "eslint '*.js' src",
+    "lint-fix:eslint": "eslint --fix '*.js' src",
+    "lint:prettier": "prettier --check '*.js' src",
+    "lint-fix:prettier": "prettier --write '*.js' src",
+    "test": "jest",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "tsc --build tsconfig.build.json",
+    "clean": "run-s clean:build clean:rm",
+    "clean:build": "tsc --build tsconfig.build.json --clean",
+    "clean:rm": "rimraf lib",
+    "prepublishOnly": "run-s clean lint test build"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^16.14.0 || ^17.0.0"
+  },
+  "devDependencies": {}
+}
