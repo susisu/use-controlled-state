@@ -1,7 +1,7 @@
 {
   "name": "@susisu/use-controlled-state",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "A utility for managing controlled local states",
   "repository": "https://github.com/susisu/use-controlled-state.git",
   "author": "Susisu <susisu2413@yahoo.co.jp>",
   "license": "MIT",
